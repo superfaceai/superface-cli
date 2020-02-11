@@ -1,6 +1,7 @@
 import handle from "./util/handle";
 import isValidURL from "./util/url";
 import { readYAMLFileToJSON } from "./util/readYAML";
+import setMappingStore from "./util/mappingStore";
 
 export default async (argv: any) => {
   // console.log(argv.serviceUrl, argv.profile, argv.mapping);
@@ -28,6 +29,9 @@ export default async (argv: any) => {
   console.log(loadMapping.data);
 
   // Set mapping in the mapping store
+  setMappingStore(loadMapping.data);
 
   // Register service at the registry
 }
+
+

@@ -1,7 +1,7 @@
 # superface-cli
 Superface CLI tool
 
-## Register a service
+## Usage
 
 ### Register a service in superface service registry
 ```
@@ -12,4 +12,3 @@ $ superface register http://api.hubspot.com --profile=http://supermodel.io/super
 ```
 $ superface mapping set --url=http://api.hubspot.com --mapping=./HubSpot.oas3.yaml
 ```
-
