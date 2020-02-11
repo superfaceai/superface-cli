@@ -24,7 +24,7 @@ require("yargs")
           string: true
         })
         .options("mapping", {
-          describe: "path to a local mapping file",
+          describe: "path to a local mapping file (YAML)",
           alias: "m",
           demandOption: true,
           requiresArg: true,

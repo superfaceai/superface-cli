@@ -10,10 +10,12 @@
   "private": false,
   "dependencies": {
     "dotenv": "^8.2.0",
+    "js-yaml": "^3.13.1",
     "superdriver": "^0.10.3",
     "yargs": "^15.1.0"
   },
   "devDependencies": {
+    "@types/js-yaml": "^3.12.2",
     "@types/node": "^13.7.0",
     "@types/yargs": "^15.0.3",
     "nodemon": "^2.0.2",
@@ -29,4 +31,3 @@
     "build": "tsc -p ."
   }
 }
-
