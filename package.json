@@ -1,0 +1,32 @@
+{
+  "name": "superface",
+  "version": "0.1.0",
+  "description": "superface command line tool",
+  "homepage": "https://superface.ai",
+  "main": "lib/index.js",
+  "repository": "https://github.com/superindustries/superface-cli.git",
+  "author": "Zdenek 'Z' Nemec <z@superface.ai>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "superdriver": "^0.10.3",
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "@types/yargs": "^15.0.3",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "bin": {
+    "superface": "./lib/index.js"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "build": "tsc -p ."
+  }
+}
+
