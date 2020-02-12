@@ -36,7 +36,10 @@ async function setMappingStore(mapping: string) {
       parameters: {
         mapping: mapping
       },
-      response: []
+      response: [
+        "create/mappingId",
+        "create/mappingUrl",
+      ]
     })
   );
 
