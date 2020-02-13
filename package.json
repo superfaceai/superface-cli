@@ -26,8 +26,8 @@
     "superface": "./lib/index.js"
   },
   "scripts": {
-    "start": "DEBUG=*, ts-node src/index.ts",
-    "dev": "DEBUG=*, nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "start": "DEBUG=*,-superdriver:*, ts-node src/index.ts",
+    "dev": "DEBUG=*,-superdriver:*, nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "build": "tsc -p ."
   }
 }

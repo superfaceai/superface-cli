@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 require("dotenv").config();
 
-import register from "./register"
+import register from "./cmd/register";
 
 require("yargs")
   .scriptName("superface")
@@ -27,6 +27,12 @@ require("yargs")
           describe: "path to a local mapping file (YAML)",
           alias: "m",
           demandOption: true,
+          requiresArg: true,
+          string: true
+        })
+        .options("mappingId", {
+          describe: "mapping store id to udpate with the mapping file",
+          demandOption: false,
           requiresArg: true,
           string: true
         });
