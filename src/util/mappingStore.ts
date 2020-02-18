@@ -53,7 +53,7 @@ async function setMappingStore(mappingFilePath: string, mappingId?: string) {
           mappingId: mappingId,
           mapping: loadMapping.data
         },
-        response: ["update/mappingId", "update/mappingUrl"]
+        response: ["mapping/mappingId", "mapping/mappingUrl"]
       })
     );
   } else {
@@ -65,7 +65,7 @@ async function setMappingStore(mappingFilePath: string, mappingId?: string) {
         parameters: {
           mapping: loadMapping.data
         },
-        response: ["create/mappingId", "create/mappingUrl"]
+        response: ["mapping/mappingId", "mapping/mappingUrl"]
       })
     );
   }
@@ -75,9 +75,7 @@ async function setMappingStore(mappingFilePath: string, mappingId?: string) {
     throw new Error("problem setting mapping");
   }
 
-  const mappingUrl = mappingId
-    ? mappingEntry.data["update/mappingUrl"]
-    : mappingEntry.data["create/mappingUrl"];
+  const mappingUrl = mappingEntry.data["mapping/mappingUrl"];
   if (!mappingUrl) {
     throw new Error("unable to retrieve new mapping url");
   }
@@ -86,7 +84,7 @@ async function setMappingStore(mappingFilePath: string, mappingId?: string) {
     mappingId
       ? "--> mapping updated, mappingId:"
       : "--> mapping set new mapping, mappingId:",
-    mappingEntry.data[mappingId ? "update/mappingId" : "create/mappingId"]
+    mappingEntry.data["mapping/mappingId"]
   );
   return mappingService.serviceUrl + mappingUrl + "/source";
 }
