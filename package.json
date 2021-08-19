@@ -1,0 +1,17 @@
+{
+  "name": "superface",
+  "version": "0.1.0",
+  "description": "(deprecated) superface command line tool",
+  "homepage": "https://superface.ai",
+  "main": "src/index.js",
+  "repository": "https://github.com/superindustries/superface-cli.git",
+  "author": "Zdenek 'Z' Nemec <z@superface.ai>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {},
+  "bin": {
+    "superface": "./src/index.js"
+  },
+  "scripts": {}
+}
