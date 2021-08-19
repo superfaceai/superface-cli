@@ -1,6 +1,6 @@
 {
   "name": "superface",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "(deprecated) superface command line tool",
   "homepage": "https://superface.ai",
   "main": "src/index.js",
